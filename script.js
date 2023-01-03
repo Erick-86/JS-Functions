@@ -6,3 +6,4 @@ function logger(){
 
 //calling / running / invoking the function
 logger()
+//Each time the function name is been called, the code in the function is executed

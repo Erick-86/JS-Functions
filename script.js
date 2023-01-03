@@ -25,3 +25,26 @@ const appleJuice = fruitProcessor(5, 0)
 console.log(appleJuice)
 console.log(fruitProcessor(4, 0))
 //to use the values which was returned, the function name needs to stored in a variable
+
+//Function declaration and expressions
+//Declaration
+function calcAge1(birthYear){
+    return 2037 - birthYear
+}
+
+const age1 = calcAge1(1992)
+console.log(age1)
+
+//Expression
+const calcAge2 = function (birthYear){
+    return 2037 - birthYear
+}
+//With function expression, the function statement is declared to a variable
+//the function name then become the name of the variable (a function without a name)
+const age2 = calcAge2(1991)
+console.log(age2)
+//parameters are like a placeholder in the function and the arguments are the values to fill into the placeholder
+
+//DIFFERENCES
+//function declaration can be called before the function block of code
+//Function expressions cant be called before the function block of code

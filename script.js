@@ -48,3 +48,21 @@ console.log(age2)
 //DIFFERENCES
 //function declaration can be called before the function block of code
 //Function expressions cant be called before the function block of code
+
+//ARROW FUNCTIONS
+//Arrow functions was released in ES6
+
+//SYNTAX
+//function = (parametres) => return
+//Example
+const calcAge3 = birthYear => 2030 - birthYear
+console.log(calcAge3(1991))
+
+//EXAMPLE 2
+//With 2 parametres
+const yearUntilRetirement = (birthYear, firstName) => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    return `${firstName} will retire in ${retirement}`
+}
+console.log(yearUntilRetirement(1991, 'Eric'))

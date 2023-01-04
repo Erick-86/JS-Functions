@@ -66,3 +66,34 @@ const yearUntilRetirement = (birthYear, firstName) => {
     return `${firstName} will retire in ${retirement}`
 }
 console.log(yearUntilRetirement(1991, 'Eric'))
+
+//FUNCTIONS CALLING OTHER FUNCTIONS
+//NESTED FUNCTIONS (FUNCTIONS INSIDE FUNCTIONS)
+function addSquare(a, b){
+    function square(x){
+        return x * x //x*x = x square. there x square will be the argument in the sqaure;s paramentre
+    }
+
+    return square(a) + square(b) 
+}
+
+console.log(addSquare(2, 3)) // a = 2 (2 squared = 4) b = 3(3 squared = 9)
+//Therefore 4 + 9 = 13
+
+
+//FUNCTIONS CALLING OTHER EXTERNAL FUNCTIONS
+//first function
+function cutFruitPieces(fruit){
+    return fruit * 4
+}
+
+//secong function
+function fruitProcessor1(guava, pear){
+    const guavaPieces = cutFruitPieces(guava);
+    const pearPieces = cutFruitPieces(pear)
+
+    const drink = `Drink with ${guavaPieces} pieces Guava and ${pearPieces} pieces of Pear`
+    return drink
+}
+
+console.log(fruitProcessor1(2, 3))
